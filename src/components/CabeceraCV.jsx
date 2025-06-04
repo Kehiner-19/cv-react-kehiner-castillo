@@ -1,4 +1,4 @@
-import "./CabeceraCV.css";
+
 
 export default function CabeceraCV() {
   return (

@@ -1,11 +1,13 @@
 
-
+import CabeceraCV from "./components/CabeceraCV.jsx";
 function App() {
  
 
   return (
     <>
-      <h1>mi cv</h1>
+      <CabeceraCV />
+
+      
     </>
   )
 }
