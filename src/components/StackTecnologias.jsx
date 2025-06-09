@@ -32,4 +32,4 @@ export default function StackTecnologias() {
       </ul>
     </section>
   );
-}
+}git add src/components/StackTecnologias.jsx
