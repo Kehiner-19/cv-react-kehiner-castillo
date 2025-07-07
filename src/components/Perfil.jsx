@@ -13,4 +13,4 @@ export default function Perfil({ resumen, habilidades }) {
     </section>
   );
 }
-console.log("Cambio de prueba");
+
