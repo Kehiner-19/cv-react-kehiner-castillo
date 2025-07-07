@@ -12,3 +12,4 @@ export default function Educacion({ estudios = [] }) {
     </section>
   );
 }
+console.log("Cambio de prueba");
