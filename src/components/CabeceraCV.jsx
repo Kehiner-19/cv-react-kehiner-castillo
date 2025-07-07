@@ -24,5 +24,5 @@ export default function CabeceraCV({ nombre, cargo, contacto, ciudad, telefono, 
     </header>
   );
 }
-console.log("Cambio de prueba");
+
 
