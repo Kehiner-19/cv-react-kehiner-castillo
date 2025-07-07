@@ -16,8 +16,8 @@ export default function StackTecnologias({ technologies }) {
     <section>
       <h3>Stack de Tecnologías</h3>
       <ul>
-        {technologies.map((tech, index) => (
-          <li key={index} style={{ color: obtenerColor(tech.tipo) }}>
+        {technologies.map((tech) => (
+          <li key={tech.id} style={{ color: obtenerColor(tech.tipo) }}>
             {tech.nombre} - <em>{tech.tipo}</em>
           </li>
         ))}
@@ -25,3 +25,4 @@ export default function StackTecnologias({ technologies }) {
     </section>
   );
 }
+
