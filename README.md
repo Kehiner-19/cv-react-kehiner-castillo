@@ -1,12 +1,45 @@
-# React + Vite
+# CV React - Kehiner Castillo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una hoja de vida (CV) digital construida con React utilizando componentes reutilizables y el paso de datos mediante **props** con **desestructuración**. Forma parte de la actividad formativa **GA1-220501096-03-AA1-EV07** del SENA.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Objetivo
 
-## Expanding the ESLint configuration
+Aplicar el uso de **props** y **desestructuración** para crear componentes reutilizables, modulares y dinámicos, mejorando la escalabilidad y organización del código en una aplicación React.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧱 Estructura del Proyecto
+
+El proyecto contiene los siguientes componentes:
+
+| Componente      | Props que recibe                                                                 |
+|-----------------|-----------------------------------------------------------------------------------|
+| `CabeceraCV`    | `nombre`, `cargo`, `contacto`, `telefono`, `ciudad`, `foto`                      |
+| `Perfil`        | `resumen`, `habilidades`                                                         |
+| `Experiencia`   | `experiencias` (arreglo con cargo, empresa y periodo)                            |
+| `Educacion`     | `estudios` (arreglo con título, institución y periodo)                           |
+| `StackTecnologias` | `technologies` (arreglo con nombre y tipo de tecnología)                     |
+
+Todos los datos se definen como constantes dentro del archivo `App.jsx` y se pasan a cada componente mediante **props**.
+
+---
+
+## 🔄 Uso de Props y Desestructuración
+
+Se implementó la desestructuración directamente en los parámetros de cada componente. Ejemplo:
+
+```jsx
+export default function Perfil({ resumen, habilidades }) {
+  return (
+    <section>
+      <p>{resumen}</p>
+      <ul>
+        {habilidades.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </section>
+  );
+}
